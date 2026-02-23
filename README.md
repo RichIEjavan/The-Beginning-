@@ -153,7 +153,7 @@ Author: Your Name
 
 GitHub: @yourusername
 
-Email: your.email@example.com
+Email: richardjanan86@gmail.com
 
 For questions or feedback, feel free to open an issue or contact me directly.
 
