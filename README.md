@@ -1,2 +1,0 @@
-# The-Beginning-
-AI project
