@@ -1,0 +1,194 @@
+# Elderly Home Management System (EHMS) – User Manual
+**Version 1.0**
+
+---
+
+## Table of Contents
+1. [Introduction](#1-introduction)
+2. [Getting Started](#2-getting-started)
+3. [User Roles](#3-user-roles)
+4. [Login and Dashboard](#4-login-and-dashboard)
+5. [Managing Residents](#5-managing-residents)
+6. [Managing Staff](#6-managing-staff-admin-only)
+7. [Appointments](#7-appointments)
+8. [Medical Records](#8-medical-records)
+9. [Billing](#9-billing)
+10. [Search](#10-search)
+11. [Troubleshooting](#11-troubleshooting)
+
+---
+
+## 1. Introduction
+The Elderly Home Management System (EHMS) is a web-based application designed to help elderly care facilities manage residents, staff, appointments, medical records, and billing efficiently. This manual guides users through the system’s features and operations.
+
+---
+
+## 2. Getting Started
+### 2.1 System Requirements
+- **Server**: XAMPP (Apache, MySQL) installed locally.
+- **Browser**: Google Chrome, Mozilla Firefox, or Microsoft Edge.
+- **URL**: `http://localhost/elderly_home`
+
+### 2.2 Accessing the System
+1. Start XAMPP and ensure Apache and MySQL are running.
+2. Open a web browser and navigate to `http://localhost/elderly_home`.
+3. You will see the login page.
+
+---
+
+## 3. User Roles
+The system supports four user roles with different permissions:
+
+| Role         | Permissions                                                                 |
+|--------------|-----------------------------------------------------------------------------|
+| **Admin**    | Full access: manage residents, staff, appointments, medical records, billing, and system settings. |
+| **Doctor**   | View residents, manage appointments, add/view medical records.              |
+| **Nurse**    | View residents, add observations to medical records.                        |
+| **Receptionist** | Manage residents, schedule appointments, handle billing.                 |
+
+---
+
+## 4. Login and Dashboard
+### 4.1 Login
+1. Enter your **Username** and **Password**.
+2. Click **Login**.
+3. If credentials are correct, you will be redirected to your role-specific dashboard.
+
+### 4.2 Dashboard
+After login, you will see a dashboard with:
+- **Statistics cards**: Number of active residents, today’s appointments, pending bills, etc.
+- **Quick actions**: Buttons to add resident, schedule appointment, etc.
+- **Upcoming appointments list** (if applicable to your role).
+
+---
+
+## 5. Managing Residents
+### 5.1 Viewing Residents
+- Click **Residents** in the navigation menu.
+- A list of all residents appears, showing Name, DOB, Room, Status, and Actions.
+
+### 5.2 Adding a New Resident
+1. Click **Add New Resident** button.
+2. Fill in the required fields (marked with *):
+   - First Name*
+   - Last Name*
+   - Date of Birth*
+   - Gender*
+   - Emergency Contact Name
+   - Emergency Contact Phone
+   - Admission Date*
+   - Room Number
+3. Click **Save**. The new resident appears in the list.
+
+### 5.3 Editing a Resident
+- Click **Edit** next to the resident.
+- Modify fields and click **Update**.
+
+### 5.4 Discharging a Resident
+- Click **Discharge** next to an active resident.
+- Confirm the action; resident status changes to “Discharged”.
+
+---
+
+## 6. Managing Staff (Admin Only)
+### 6.1 Viewing Staff
+- Click **Staff** in the navigation.
+- List of all staff members is displayed.
+
+### 6.2 Adding New Staff
+1. Click **Add New Staff**.
+2. Enter:
+   - First Name*
+   - Last Name*
+   - Role* (Doctor/Nurse/Receptionist/Admin)
+   - Specialization
+   - Phone
+   - Email*
+3. Click **Save**. A user account is automatically created with a default password (to be changed on first login).
+
+### 6.3 Editing or Deleting Staff
+- Use **Edit** or **Delete** buttons next to each staff record.
+
+---
+
+## 7. Appointments
+### 7.1 Viewing Appointments
+- Click **Appointments** in the menu.
+- All appointments are listed with date, time, resident, doctor, reason, and status.
+
+### 7.2 Scheduling an Appointment
+1. Click **Schedule New Appointment**.
+2. Select **Resident** and **Doctor** from dropdowns.
+3. Choose **Date** and **Time**.
+4. Enter **Reason** (optional).
+5. Click **Schedule**.
+
+### 7.3 Appointment Status
+- **Scheduled**: Default when created.
+- **Completed**: After check-out.
+- **Cancelled**: If cancelled.
+
+### 7.4 Check-In / Check-Out
+- Receptionist can click **Check In** to record arrival time.
+- After visit, click **Check Out** to mark as completed.
+
+---
+
+## 8. Medical Records
+### 8.1 Viewing Medical Records
+1. Go to **Residents**.
+2. Click **Medical Records** next to a resident.
+3. All records are displayed chronologically.
+
+### 8.2 Adding a Medical Record
+1. From the resident’s medical records page, click **Add New Record**.
+2. Fill in:
+   - Record Date*
+   - Diagnosis
+   - Observations
+   - Prescriptions
+3. Click **Save**.
+
+---
+
+## 9. Billing
+### 9.1 Viewing Invoices
+- Click **Billing** in the menu.
+- List of all invoices with resident, description, amount, status, and due date.
+
+### 9.2 Creating an Invoice
+1. Click **Create New Invoice**.
+2. Select **Resident**.
+3. Enter **Description** (e.g., “Monthly Care Fee”).
+4. Enter **Amount** (numeric).
+5. Set **Due Date** (optional).
+6. Click **Create**.
+
+### 9.3 Marking an Invoice as Paid
+- Click **Mark Paid** next to a pending invoice.
+- Confirm; status changes to “Paid”.
+
+---
+
+## 10. Search
+- Use the **Search** box in the top navigation bar.
+- Enter a name (or partial name) or room number.
+- Results show matching residents and staff.
+
+---
+
+## 11. Troubleshooting
+
+| Problem                     | Possible Cause                          | Solution                                         |
+|-----------------------------|-----------------------------------------|--------------------------------------------------|
+| Cannot log in               | Incorrect username/password             | Verify credentials; contact admin if forgotten. |
+| Page not loading            | Apache/MySQL not running                | Start XAMPP services.                             |
+| Data not saving             | Required fields missing                 | Check for asterisks (*) and fill them.           |
+| Access denied               | Insufficient permissions                | You are trying to access a page not allowed for your role. |
+| System slow                 | Large data or server load               | Refresh page; if persists, contact IT.           |
+
+---
+
+**For further assistance, contact the system administrator.**  
+*Document Version: 1.0*  
+*Last Updated: February 2026*
